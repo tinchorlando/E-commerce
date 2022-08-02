@@ -1,21 +1,3 @@
-## API
-
-Para que la api funcione es necesario crear un archivo .env de la siguiente forma:
-
-```env
-DB_USER=usuariodepostgres
-DB_PASSWORD=passwordDePostgres
-DB_HOST=localhost
-
-JWT_SECRET=palabraSecret
-COOKIE_SECRET=asK9USD8SFZASLDlpfkqaefrekigdxkicauqLSDKFE
-
-DEPLOYED=true en caso de que se este haciendo un deploy.
-```
-
-También hay que tener creada una base de datos con el nombre eccomerce
-
-
 ## ENDPOINTS
 
 POST /category. Recibe por body:
@@ -148,16 +130,3 @@ PUT /edit/product. El unico dato obligatorio es el id. El resto son opcionales. 
 ```
 
 PUT /ban/uid. Banea al user del uid pasado por param.
-
-
-
-Faltan por documentar las rutas de los siguientes archivos (no entendi bien como funcionaban así que porfa fijense los que las hicieron y documentenlas en este readme.):
-
-<ul>
-
-    <li>editProduct.js</li>
-    
-    <li>createPedido.js</li>
-
-    <li>favoritos.js</li>
-</ul>
