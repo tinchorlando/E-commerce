@@ -51,7 +51,7 @@ Para que la api funcione es necesario crear un archivo .env en la carpeta `serve
 DB_USER=usuariodepostgres
 DB_PASSWORD=passwordDePostgres
 DB_HOST=localhost
-
+FRONTEND_URL=front deploy url
 JWT_SECRET=secretoJWT
 COOKIE_SECRET=secretoCookie
 
