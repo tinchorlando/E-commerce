@@ -1,6 +1,6 @@
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
-
+const PORT = process.env.DB_PORT
 const {
   Producto,
   Talle,
@@ -20,7 +20,7 @@ const { hashPassword } = require("./src/helpers/hashPassword.js");
 conn
   .sync({ force: process.env.DEPLOYED === "true" ? false : true })
   .then(() => {
-    server.listen(process.env.DB_PORT, async () => {
+    server.listen(process.env.PORT, async () => {
       //Cuento los productos para ver si ya fueron cargados antes.
       const productosCuenta = await Producto.count();
       const TallesCuenta = await Talle.count();
@@ -28,7 +28,7 @@ conn
         console.log("Los productos ya estaban cargados en la DB.");
         return;
       }
-      console.log(`%s listening at ${process.env.DB_PORT}`);
+      console.log(`%s listening at ${process.env.PORT}`);
       const productosJSON = JSON.parse(
         fs.readFileSync(__dirname + "/src/models/assets/productos.json")
       );
