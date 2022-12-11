@@ -49,16 +49,18 @@ Para que la api funcione es necesario crear un archivo .env en la carpeta `serve
 
 ```env
 DB_USER=usuariodepostgres
-DB_PASSWORD=passwordDePostgres
+DB_NAME=database name
 DB_HOST=localhost
-FRONTEND_URL=front deploy url
+DB_PASSWORD=passwordDePostgres
+DB_PORT=database port
 JWT_SECRET=secretoJWT
 COOKIE_SECRET=secretoCookie
 
 DEPLOYED=true en caso de que se este haciendo un deploy.
+FRONTEND_URL=front deploy url
 ```
 
-También hay que tener creada una base de datos con el nombre `eccomerce`
+También hay que tener creada una base de datos con el nombre `ecommerce`
 Una vez creado este archivo y la base de datos, se deben instalar todas las dependencias necesarias:
 Mediante el uso de la terminal ingresar la carpeta server y ejecutar los comandos:
 ```
