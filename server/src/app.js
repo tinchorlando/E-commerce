@@ -33,8 +33,9 @@ server.use(
   cookieSession({
     name: "FOOD-API",
     secret: process.env.COOKIE_SECRET, // Crear variable
-    httpOnly: true,
+    httpOnly: false,
     sameSite: "strict",
+    secure: false
   })
 );
 // para acceder a info sensible primero verificar el id desde la galleta req.session.userId
